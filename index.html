@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Zone Cancún & InflArte Academia de Globos | Fiestas, Cursos & Snacks</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pz-pink': '#E75480',
+                        'pz-hotpink': '#FF3385',
+                        'pz-mint': '#6ED2B8',
+                        'pz-blue': '#4FC3F7',
+                        'pz-yellow': '#FFD166',
+                        'pz-purple': '#9B5DE5',
+                        'pz-cream': '#FFFDF9',
+                        'pz-dark': '#2B2338',
+                        'pz-softpink': '#FFEBF2'
+                    },
+                    fontFamily: {
+                        party: ['"Fredoka"', 'sans-serif'],
+                        body: ['"Quicksand"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFFDF9;
+            color: #2B2338;
+            overflow-x: hidden;
+            /* Festive subtle sprinkles background pattern */
+            background-image: radial-gradient(#FFD166 1.4px, transparent 1.4px), radial-gradient(#E75480 1.2px, #FFFDF9 1.2px);
+            background-size: 46px 46px;
+            background-position: 0 0, 23px 23px;
+        }
+        .font-party {
+            font-family: 'Fredoka', sans-serif;
+        }
+        /* Floating animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        @keyframes pulseSoft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+        .animate-float {
+            animation: floatSlow 4.5s ease-in-out infinite;
+        }
+        .animate-pulse-soft {
+            animation: pulseSoft 3s ease-in-out infinite;
+        }
+        .confetti-dot {
+            position: absolute;
+            border-radius: 9999px;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFDF9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E75480;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="selection:bg-pz-pink selection:text-white">
+
+    <!-- Top Quick Social Bar (Direct social links) -->
+    <div class="bg-gradient-to-r from-pz-pink via-pz-purple to-pz-blue text-white py-2 px-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
+            <div class="flex items-center gap-2 font-medium text-center sm:text-left">
+                <span class="inline-block animate-bounce text-sm">🎈</span>
+                <span>¡Expertos en Fiestas, Sorpresas, Snacks & Cursos en Cancún!</span>
+            </div>
+
+            <div class="flex items-center gap-2 font-semibold flex-wrap justify-center">
+                <span class="hidden md:inline text-[11px] opacity-90 mr-1">Síguenos:</span>
+
+                <!-- Facebook Party Zone -->
+                <a id="header-fb-party" href="https://www.facebook.com/sorpresas.adomicilio.cancun" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 bg-white/20 hover:bg-white text-white hover:text-pz-dark px-3 py-1 rounded-full transition-all text-[11px] shadow-xs" title="Facebook Party Zone Cancún">
+                    <i class="fa-brands fa-facebook text-blue-300"></i>
+                    <span>Party Zone</span>
+                </a>
+
+                <!-- Facebook InflArte -->
+                <a id="header-fb-inflarte" href="https://www.facebook.com/profile.php?id=100063479105467" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 bg-white/20 hover:bg-white text-white hover:text-pz-dark px-3 py-1 rounded-full transition-all text-[11px] shadow-xs" title="Facebook InflArte Academia">
+                    <i class="fa-solid fa-graduation-cap text-yellow-300"></i>
+                    <span>InflArte Cursos</span>
+                </a>
+
+                <!-- TikTok -->
+                <a id="header-tiktok" href="https://www.tiktok.com/@partyzone_cancun?lang=es-419" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 bg-white/20 hover:bg-white text-white hover:text-pz-dark px-3 py-1 rounded-full transition-all text-[11px] shadow-xs" title="TikTok Party Zone">
+                    <i class="fa-brands fa-tiktok text-pink-300"></i>
+                    <span>TikTok</span>
+                </a>
+
+                <!-- WhatsApp Direct Chat -->
+                <a id="header-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-400 text-white font-bold px-3.5 py-1 rounded-full transition-all text-[11px] shadow-sm animate-pulse-soft" title="Chatear en WhatsApp">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-white/95 backdrop-blur-md border-b-2 border-pz-softpink shadow-xs sticky top-[41px] z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="flex items-center gap-2">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pz-pink to-pz-yellow flex items-center justify-center shadow-md group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-cake-candles text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1">
+                            <span class="font-party text-2xl font-bold tracking-tight text-pz-pink leading-none">Party Zone</span>
+                            <span class="text-[11px] bg-pz-blue text-white px-2 py-0.5 rounded-md font-bold uppercase tracking-wider">Cancún</span>
+                        </div>
+                        <div class="flex items-center gap-1 text-[11px] text-pz-purple font-bold">
+                            <span>& InflArte</span>
+                            <span class="font-normal text-gray-500">• Academia de Globos</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-7 font-bold text-sm text-pz-dark">
+                <a href="#inicio" class="hover:text-pz-pink transition-colors">Inicio</a>
+                <a href="#nosotros" class="hover:text-pz-pink transition-colors">Quiénes Somos</a>
+                <a href="#albumes" class="hover:text-pz-pink transition-colors flex items-center gap-1">
+                    <span>Álbumes de Trabajos</span>
+                    <span class="w-2 h-2 rounded-full bg-pz-pink animate-ping"></span>
+                </a>
+                <a href="#contacto" class="hover:text-pz-pink transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Quick WhatsApp Action CTA -->
+            <div class="flex items-center gap-2">
+                <a id="nav-btn-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-pz-pink to-pz-hotpink text-white px-5 py-2.5 rounded-full text-xs font-party tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 transition-all">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>¡Cotizar mi fiesta!</span>
+                </a>
+                
+                <button id="mobile-toggle" aria-label="Abrir menú" class="md:hidden text-pz-pink p-2 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-nav" class="hidden md:hidden bg-white border-b-2 border-pz-pink px-6 py-4 space-y-3 font-semibold text-sm">
+            <a href="#inicio" class="block text-pz-dark hover:text-pz-pink py-1">Inicio</a>
+            <a href="#nosotros" class="block text-pz-dark hover:text-pz-pink py-1">Quiénes Somos</a>
+            <a href="#albumes" class="block text-pz-dark hover:text-pz-pink py-1">Álbumes de Trabajos</a>
+            <a href="#contacto" class="block text-pz-dark hover:text-pz-pink py-1">Contacto & Redes</a>
+            <a id="mobile-wa-link" href="#" target="_blank" class="w-full text-center inline-block bg-pz-pink text-white py-2.5 rounded-full text-xs font-party tracking-wider uppercase mt-2 shadow-sm">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Chatear por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-10 pb-16 md:py-20 overflow-hidden bg-gradient-to-b from-pz-softpink/50 via-white to-pz-cream">
+        <div class="confetti-dot bg-pz-pink w-4 h-4 top-16 left-12 animate-float"></div>
+        <div class="confetti-dot bg-pz-yellow w-5 h-5 top-36 left-1/4 animate-bounce"></div>
+        <div class="confetti-dot bg-pz-blue w-6 h-6 top-24 right-16 animate-float" style="animation-delay: 1.5s;"></div>
+        <div class="confetti-dot bg-pz-purple w-4 h-4 bottom-20 left-10 animate-float" style="animation-delay: 2s;"></div>
+        <div class="confetti-dot bg-pz-mint w-5 h-5 bottom-12 right-1/4 animate-bounce"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                        <span class="px-4 py-1.5 rounded-full bg-pz-pink/15 text-pz-pink font-party text-xs font-bold uppercase tracking-wider border border-pz-pink/30 flex items-center gap-1.5 shadow-xs">
+                            <i class="fa-solid fa-cake-candles"></i> Party Zone Cancún
+                        </span>
+                        <span class="px-4 py-1.5 rounded-full bg-pz-yellow/30 text-amber-700 font-party text-xs font-bold uppercase tracking-wider border border-amber-300 flex items-center gap-1.5 shadow-xs">
+                            <i class="fa-solid fa-graduation-cap"></i> InflArte Academia
+                        </span>
+                    </div>
+
+                    <h1 class="font-party text-4xl sm:text-5xl lg:text-6xl text-pz-dark font-bold leading-tight">
+                        ¡Fiestas llenas de <span class="text-pz-hotpink underline decoration-pz-yellow decoration-wavy">globos, sabor</span> y momentos únicos!
+                    </h1>
+
+                    <p class="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                        En <strong>Party Zone Cancún</strong> decoramos tus cumpleaños, sorpresas y festejos con increíbles montajes de globos, deliciosa <strong>barra de snacks</strong> y adicionales. Y en nuestra academia <strong>InflArte</strong> te capacitamos con cursos prácticos de globos para que emprendas tu propio negocio.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#albumes" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pz-pink to-pz-hotpink text-white font-party font-bold text-sm hover:scale-105 transition-all shadow-lg hover:shadow-xl text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-images"></i>
+                            <span>Ver Álbumes de Trabajos</span>
+                        </a>
+                        <a id="hero-cta-whatsapp" href="#" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border-2 border-emerald-500 text-emerald-700 font-party font-bold text-sm hover:bg-emerald-50 transition-all shadow-sm text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
+                            <span>Cotizar por WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-6 grid grid-cols-3 gap-3 border-t-2 border-dashed border-pz-softpink">
+                        <div class="bg-white p-3 rounded-2xl border border-pz-pink/20 shadow-xs text-center">
+                            <p class="font-party text-2xl sm:text-3xl font-bold text-pz-pink">100%</p>
+                            <p class="text-[11px] font-semibold text-gray-600">Personalizado</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl border border-pz-yellow/40 shadow-xs text-center">
+                            <p class="font-party text-2xl sm:text-3xl font-bold text-amber-500">InflArte</p>
+                            <p class="text-[11px] font-semibold text-gray-600">Cursos Prácticos</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl border border-pz-blue/30 shadow-xs text-center">
+                            <p class="font-party text-2xl sm:text-3xl font-bold text-pz-blue">Cancún</p>
+                            <p class="text-[11px] font-semibold text-gray-600">Servicio Local</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Brand Graphic (No generic fake photos) -->
+                <div class="lg:col-span-5 relative flex flex-col items-center">
+                    <div class="relative w-full max-w-md bg-white p-6 rounded-3xl shadow-xl border-4 border-pz-softpink text-center space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-pz-pink to-pz-yellow flex items-center justify-center shadow-lg text-4xl">
+                            🎉
+                        </div>
+                        <h3 class="font-party text-2xl font-bold text-pz-dark">Party Zone Cancún</h3>
+                        <p class="text-xs text-pz-purple font-bold uppercase tracking-wider">& InflArte Academia de Globos</p>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Montajes profesionales de globos, deliciosas barras botaneras de snacks y cursos presenciales en Cancún. Explora abajo nuestros álbumes con fotos reales de eventos y capacitaciones.
+                        </p>
+                        <div class="pt-3 border-t border-pz-softpink flex items-center justify-center gap-3">
+                            <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                                Fechas disponibles
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quienes Somos (Party Zone + InflArte) -->
+    <section id="nosotros" class="py-16 md:py-20 bg-white border-y-2 border-pz-softpink relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-gradient-to-br from-pz-softpink via-white to-pz-cream p-6 rounded-3xl border-2 border-pz-pink shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pz-pink text-white flex items-center justify-center text-3xl shadow-md mb-3">
+                            🎈
+                        </div>
+                        <h3 class="font-party text-2xl font-bold text-pz-pink">Party Zone Cancún</h3>
+                        <p class="text-xs text-gray-600 mt-1 font-medium">
+                            Expertos en sorpresas a domicilio, decoraciones temáticas con globos de impacto, fiestas infantiles, XV años y cumpleaños en todo Cancún.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-amber-50 via-white to-yellow-50 p-6 rounded-3xl border-2 border-pz-yellow shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pz-yellow text-pz-dark flex items-center justify-center text-3xl shadow-md mb-3">
+                            🎓
+                        </div>
+                        <h3 class="font-party text-2xl font-bold text-amber-600">InflArte - Academia de Globos</h3>
+                        <p class="text-xs text-gray-600 mt-1 font-medium">
+                            Nuestra extensión de capacitación. Talleres presenciales donde enseñamos técnicas de globoflexia moderna, arcos orgánicos, calibración y cómo cotizar para emprender.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-pz-pink font-party font-bold text-xs tracking-wider uppercase bg-pz-softpink px-3.5 py-1.5 rounded-full">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Nuestra Trayectoria & Pasión</span>
+                    </div>
+
+                    <h2 class="font-party text-3xl sm:text-4xl text-pz-dark font-bold leading-tight">
+                        Creamos la fiesta que imaginas y te formamos como decoradora profesional
+                    </h2>
+
+                    <div class="text-gray-700 text-sm sm:text-base space-y-4 leading-relaxed font-medium">
+                        <p>
+                            En <strong>Party Zone Cancún</strong> sabemos que tu fiesta o sorpresa es un momento inolvidable. Nos encargamos de montar decoraciones con globos coloridas y resistentes al clima, así como <strong>barras de snacks</strong> botaneras completas para consentir a tus invitados con botanas, fruta fresca y salsas.
+                        </p>
+                        <p>
+                            Y si lo que buscas es aprender a decorar, en <strong>InflArte</strong> impartimos talleres prácticos donde te llevas todo el conocimiento para iniciar tu propio emprendimiento de eventos con confianza.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="p-3 bg-pz-cream rounded-2xl border border-pz-pink/30 flex items-center gap-3">
+                            <span class="text-2xl">🎈</span>
+                            <div>
+                                <h4 class="font-party font-bold text-xs text-pz-dark">Globos de Calidad</h4>
+                                <p class="text-[11px] text-gray-600">Materiales duraderos y colores vibrantes.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-pz-cream rounded-2xl border border-pz-yellow/40 flex items-center gap-3">
+                            <span class="text-2xl">🎓</span>
+                            <div>
+                                <h4 class="font-party font-bold text-xs text-pz-dark">Academia InflArte</h4>
+                                <p class="text-[11px] text-gray-600">Cursos prácticos para emprender.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-pz-cream rounded-2xl border border-pz-mint/40 flex items-center gap-3">
+                            <span class="text-2xl">🍉</span>
+                            <div>
+                                <h4 class="font-party font-bold text-xs text-pz-dark">Barra de Snacks</h4>
+                                <p class="text-[11px] text-gray-600">Papas, frutas, chamoy, gomitas y salsas.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-pz-cream rounded-2xl border border-pz-blue/40 flex items-center gap-3">
+                            <span class="text-2xl">🚚</span>
+                            <div>
+                                <h4 class="font-party font-bold text-xs text-pz-dark">Servicio en Cancún</h4>
+                                <p class="text-[11px] text-gray-600">Montaje puntual en tu salón o domicilio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The 4 Service Portfolios / Albums -->
+    <section id="albumes" class="py-16 md:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <span class="inline-block text-xs font-party font-bold tracking-widest text-pz-pink uppercase bg-pz-softpink px-4 py-1.5 rounded-full border border-pz-pink/30">
+                    Álbumes de Trabajos
+                </span>
+                <h2 class="font-party text-3xl sm:text-5xl text-pz-dark font-bold">
+                    Elige una categoría y conoce nuestros trabajos
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base font-medium">
+                    Haz clic en cualquiera de las 4 opciones para abrir el <strong>álbum de fotos</strong>, ver nuestros montajes reales y pedir tu cotización directa por WhatsApp.
+                </p>
+            </div>
+
+            <!-- Categories Grid (4 Interactive Cards) -->
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Dynamically generated from state & IndexedDB -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Album Modal (No fake images: shows real photos or friendly placeholder) -->
+    <div id="album-modal" class="fixed inset-0 z-50 hidden bg-pz-dark/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="relative bg-white w-full max-w-5xl rounded-3xl shadow-2xl border-4 border-pz-softpink flex flex-col max-h-[92vh] overflow-hidden">
+            
+            <!-- Modal Header -->
+            <div class="p-5 bg-gradient-to-r from-pz-softpink to-white border-b-2 border-pz-softpink flex items-center justify-between sticky top-0 z-20">
+                <div class="flex items-center gap-3">
+                    <span id="modal-badge" class="px-3 py-1 bg-pz-pink text-white rounded-full text-xs font-party font-bold uppercase tracking-wider">
+                        Álbum
+                    </span>
+                    <div>
+                        <h3 id="modal-title" class="font-party text-xl sm:text-2xl font-bold text-pz-dark leading-tight">
+                            Título
+                        </h3>
+                        <p id="modal-subtext" class="text-xs text-pz-purple font-bold">Party Zone Cancún & InflArte</p>
+                    </div>
+                </div>
+                <button onclick="closeAlbumModal()" class="w-10 h-10 rounded-full bg-pz-pink/15 hover:bg-pz-pink hover:text-white text-pz-dark flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="p-5 sm:p-8 overflow-y-auto space-y-6">
+                
+                <!-- Main Photo Display Area or Empty Fallback -->
+                <div id="modal-photo-viewer-container" class="rounded-2xl overflow-hidden border-4 border-pz-softpink shadow-md bg-neutral-900 relative min-h-[260px] max-h-[440px] flex items-center justify-center">
+                    <img id="modal-main-img" src="" alt="Foto de trabajo" class="w-full max-h-[440px] object-contain transition-all duration-300 hidden">
+                    
+                    <!-- Friendly placeholder when no photos yet -->
+                    <div id="modal-no-photos-box" class="p-8 text-center text-white space-y-3">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pz-pink/20 border-2 border-pz-pink flex items-center justify-center text-3xl">
+                            📸
+                        </div>
+                        <h4 class="font-party text-xl font-bold text-pz-yellow">Falta agregar fotos en este álbum</h4>
+                        <p class="text-xs text-white/80 max-w-md mx-auto leading-relaxed">
+                            Ángela puede subir todas las fotos que desee de sus eventos desde el botón <strong>Admin</strong> inferior utilizando la galería de su celular o computadora.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Thumbnails Gallery -->
+                <div id="modal-thumbnails-wrapper" class="hidden">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-party text-xs font-bold text-pz-dark flex items-center gap-2">
+                            <i class="fa-solid fa-camera-retro text-pz-pink"></i>
+                            <span>Haz clic en cualquier foto para agrandar:</span>
+                        </h4>
+                        <span id="modal-photo-count" class="text-xs font-bold text-gray-500">0 fotos</span>
+                    </div>
+
+                    <div id="modal-thumbnails-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+                        <!-- Injected thumbnails -->
+                    </div>
+                </div>
+
+                <!-- Description & Details -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t-2 border-pz-softpink">
+                    <div class="md:col-span-2 space-y-4">
+                        <h4 class="font-party text-lg font-bold text-pz-dark">Sobre este servicio:</h4>
+                        <p id="modal-desc" class="text-sm text-gray-700 leading-relaxed font-medium">
+                            Descripción
+                        </p>
+
+                        <div class="bg-pz-cream p-4 rounded-2xl border border-pz-pink/30 space-y-2">
+                            <h5 class="font-party text-xs font-bold uppercase text-pz-pink tracking-wider">Detalles y características:</h5>
+                            <ul id="modal-features" class="text-xs text-gray-700 space-y-1.5 list-disc pl-4 font-semibold">
+                                <!-- Injected -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Price & WhatsApp Action Box -->
+                    <div class="bg-gradient-to-br from-pz-softpink via-white to-pz-yellow/20 p-5 rounded-2xl border-2 border-pz-pink flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-party font-bold text-gray-500 uppercase">Cotización</span>
+                            <p id="modal-price" class="font-party text-2xl font-bold text-pz-hotpink mt-1">Disponible</p>
+                            <p class="text-xs text-gray-600 mt-2">
+                                Puedes pedir información de fechas, costos o pedir fotos recientes directo por WhatsApp.
+                            </p>
+                        </div>
+
+                        <button id="modal-wa-btn" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-party font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-md hover:scale-105">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Cotizar esta opción en WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact & Social Networks Section -->
+    <section id="contacto" class="py-16 md:py-20 bg-gradient-to-t from-pz-softpink via-white to-pz-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border-4 border-pz-softpink overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Left: Social Network Cards (Direct Links) -->
+                    <div class="lg:col-span-5 bg-gradient-to-br from-pz-dark via-[#35254A] to-pz-dark text-white p-8 sm:p-10 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <span class="text-pz-yellow font-party text-xs uppercase font-bold tracking-widest">Atención en Cancún</span>
+                            <h3 class="font-party text-3xl font-bold leading-tight">
+                                ¡Ponte en contacto directo con nosotros!
+                            </h3>
+                            <p class="text-xs text-white/80 leading-relaxed font-medium">
+                                Haz clic en los botones para ir directamente a nuestras redes oficiales y platicar por WhatsApp sobre tu evento.
+                            </p>
+
+                            <!-- Social Buttons -->
+                            <div class="space-y-3 pt-2">
+                                <!-- Facebook Party Zone -->
+                                <a id="contact-fb-party" href="https://www.facebook.com/sorpresas.adomicilio.cancun" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-2xl bg-white/10 hover:bg-blue-600 transition-all border border-white/10 group">
+                                    <div class="w-10 h-10 rounded-xl bg-blue-600 group-hover:bg-white text-white group-hover:text-blue-600 flex items-center justify-center text-lg">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-party text-xs font-bold text-white">Party Zone Cancún</p>
+                                        <p class="text-[11px] text-white/70">Facebook de Sorpresas & Eventos</p>
+                                    </div>
+                                </a>
+
+                                <!-- Facebook InflArte -->
+                                <a id="contact-fb-inflarte" href="https://www.facebook.com/profile.php?id=100063479105467" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-2xl bg-white/10 hover:bg-amber-600 transition-all border border-white/10 group">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500 group-hover:bg-white text-white group-hover:text-amber-600 flex items-center justify-center text-lg">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-party text-xs font-bold text-white">InflArte - Academia</p>
+                                        <p class="text-[11px] text-white/70">Facebook de Cursos & Talleres de Globos</p>
+                                    </div>
+                                </a>
+
+                                <!-- TikTok -->
+                                <a id="contact-tiktok" href="https://www.tiktok.com/@partyzone_cancun?lang=es-419" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-2xl bg-white/10 hover:bg-neutral-800 transition-all border border-white/10 group">
+                                    <div class="w-10 h-10 rounded-xl bg-neutral-900 group-hover:bg-white text-white group-hover:text-neutral-900 flex items-center justify-center text-lg">
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-party text-xs font-bold text-white">@partyzone_cancun</p>
+                                        <p class="text-[11px] text-white/70">TikTok con videos de nuestros montajes</p>
+                                    </div>
+                                </a>
+
+                                <!-- WhatsApp Button -->
+                                <a id="contact-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-2xl bg-emerald-600/30 hover:bg-emerald-600 transition-all border border-emerald-500/40 group">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xl">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-party text-xs font-bold text-emerald-300 group-hover:text-white">Chat Directo de WhatsApp</p>
+                                        <p id="display-wa-number" class="text-[11px] text-white/80">+52 1 998 000 0000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 text-[11px] text-white/60">
+                            📍 Cancún, Quintana Roo, México
+                        </div>
+                    </div>
+
+                    <!-- Right: Fast Quote Form -->
+                    <div class="lg:col-span-7 p-8 sm:p-12">
+                        <div class="inline-flex items-center gap-2 text-pz-pink font-party font-bold text-xs uppercase mb-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Cotización Inmediata</span>
+                        </div>
+                        <h4 class="font-party text-2xl font-bold text-pz-dark mb-2">Envíanos un WhatsApp directo</h4>
+                        <p class="text-xs text-gray-600 mb-6">Llena estos datos para abrir la conversación de WhatsApp con el mensaje ya listo.</p>
+
+                        <form onsubmit="handleQuoteSubmit(event)" class="space-y-4 text-xs font-medium">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-bold text-gray-700 mb-1">Tu Nombre:</label>
+                                    <input type="text" id="quote-name" required placeholder="Ej. Paola Pérez" class="w-full px-4 py-3 rounded-xl border-2 border-pz-softpink focus:outline-none focus:border-pz-pink bg-pz-cream">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-gray-700 mb-1">Tu Teléfono / WhatsApp:</label>
+                                    <input type="tel" id="quote-phone" required placeholder="Ej. 998 123 4567" class="w-full px-4 py-3 rounded-xl border-2 border-pz-softpink focus:outline-none focus:border-pz-pink bg-pz-cream">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-bold text-gray-700 mb-1">¿Qué servicio te interesa?</label>
+                                    <select id="quote-category" class="w-full px-4 py-3 rounded-xl border-2 border-pz-softpink focus:outline-none focus:border-pz-pink bg-pz-cream font-semibold">
+                                        <option value="Decoración con Globos (Party Zone)">🎈 Decoración con Globos (Party Zone)</option>
+                                        <option value="Cursos y Talleres (InflArte)">🎓 Cursos y Talleres (InflArte)</option>
+                                        <option value="Barra de Snacks">🍉 Barra de Snacks</option>
+                                        <option value="Adicionales para Eventos">✨ Adicionales para Eventos</option>
+                                        <option value="Paquete Completo">🌟 Paquete Completo</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-gray-700 mb-1">Fecha aproximada del evento:</label>
+                                    <input type="date" id="quote-date" class="w-full px-4 py-3 rounded-xl border-2 border-pz-softpink focus:outline-none focus:border-pz-pink bg-pz-cream">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Detalles de la fiesta o dudas:</label>
+                                <textarea id="quote-notes" rows="3" placeholder="Lugar, temática, colores o botanas preferidas..." class="w-full px-4 py-3 rounded-xl border-2 border-pz-softpink focus:outline-none focus:border-pz-pink bg-pz-cream"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-party font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Abrir WhatsApp con estos datos</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Admin Access Button -->
+    <footer class="bg-pz-dark text-white pt-12 pb-8 border-t-4 border-pz-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between pb-8 border-b border-white/10 gap-6 text-center md:text-left">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <span class="font-party text-2xl font-bold text-pz-pink">Party Zone Cancún</span>
+                        <span class="text-xs bg-pz-yellow text-pz-dark font-bold px-2 py-0.5 rounded">& InflArte</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">Decoración de Fiestas, Barra de Snacks & Academia de Globos en Cancún</p>
+                </div>
+                
+                <div class="flex flex-wrap items-center justify-center gap-5 text-xs font-semibold text-gray-300">
+                    <a href="#inicio" class="hover:text-pz-pink">Inicio</a>
+                    <a href="#nosotros" class="hover:text-pz-pink">Quiénes Somos</a>
+                    <a href="#albumes" class="hover:text-pz-pink">Álbumes</a>
+                    <a href="#contacto" class="hover:text-pz-pink">Contacto</a>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>© <span id="current-year"></span> Party Zone Cancún & InflArte. Todos los derechos reservados.</p>
+                
+                <button onclick="openAdminModal()" class="inline-flex items-center gap-2 text-xs text-pz-yellow hover:text-white border border-pz-yellow/40 hover:border-white px-4 py-1.5 rounded-full transition-all bg-white/5 font-party font-bold">
+                    <i class="fa-solid fa-lock text-[11px]"></i>
+                    <span id="admin-button-text">Admin</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Login Modal (User: Angela / Pass: Angela01) -->
+    <div id="admin-login-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 sm:p-8 shadow-2xl border-4 border-pz-softpink relative">
+            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 w-8 h-8 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 mx-auto rounded-full bg-pz-softpink flex items-center justify-center text-pz-pink text-2xl mb-3 shadow-inner">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <h3 class="font-party text-2xl font-bold text-pz-dark">Panel Administrativo</h3>
+                <p class="text-xs text-gray-500 mt-1">Party Zone Cancún & InflArte</p>
+            </div>
+
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-gray-700 mb-1">Usuario:</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-pz-pink">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                        <input type="text" id="admin-user-input" required placeholder="Usuario" class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-pz-pink/40 focus:ring-2 focus:ring-pz-pink bg-pz-cream">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-gray-700 mb-1">Contraseña:</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-pz-pink">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+                        <input type="password" id="admin-pass-input" required placeholder="••••••••" class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-pz-pink/40 focus:ring-2 focus:ring-pz-pink bg-pz-cream">
+                    </div>
+                </div>
+
+                <div id="admin-login-error" class="hidden text-[11px] text-red-600 bg-red-50 p-2.5 rounded-xl border border-red-200 text-center font-bold">
+                    Usuario o contraseña incorrectos.
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-pz-pink hover:bg-pz-hotpink text-white font-party font-bold text-xs uppercase tracking-wider transition-all shadow-md mt-2">
+                    Ingresar al Panel
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin CMS Dashboard (With high-capacity image uploader) -->
+    <div id="admin-cms-modal" class="fixed inset-0 z-50 hidden bg-pz-dark/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[94vh] shadow-2xl border-4 border-pz-softpink flex flex-col overflow-hidden">
+            
+            <div class="p-5 bg-pz-cream border-b-2 border-pz-softpink flex flex-wrap items-center justify-between gap-3 sticky top-0 z-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-pz-pink text-white flex items-center justify-center font-party font-bold text-lg">
+                        A
+                    </div>
+                    <div>
+                        <h3 class="font-party text-xl font-bold text-pz-dark">Panel de Control de Ángela</h3>
+                        <p class="text-xs text-pz-purple font-medium">Sube tus fotos desde tu galería y edita información</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="saveCmsData()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-party font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <span>Guardar</span>
+                    </button>
+                    <button onclick="adminLogout()" class="px-3.5 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl text-xs font-party font-bold uppercase transition-all">
+                        Salir
+                    </button>
+                    <button onclick="closeAdminCms()" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CMS Body -->
+            <div class="p-6 overflow-y-auto space-y-6 text-xs font-medium">
+                
+                <!-- Notice on photo capacity -->
+                <div class="p-3 bg-blue-50 border-2 border-blue-200 rounded-2xl flex items-start gap-3 text-blue-900">
+                    <i class="fa-solid fa-circle-info text-blue-500 text-base mt-0.5"></i>
+                    <div>
+                        <strong class="font-party">¿Cuántas fotos puedes agregar?</strong>
+                        <p class="text-[11px] text-blue-800 mt-0.5">
+                            ¡Puedes subir todas las fotos que quieras! Las imágenes se comprimen automáticamente en el navegador y se guardan en la base de datos de almacenamiento local (IndexedDB), por lo que puedes añadir decenas y cientos de fotos de tus eventos sin que la página se vuelva lenta.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Toast -->
+                <div id="cms-toast" class="hidden p-3.5 bg-emerald-50 border-2 border-emerald-300 text-emerald-800 rounded-2xl flex items-center gap-2 font-bold">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                    <span>¡Cambios guardados con éxito!</span>
+                </div>
+
+                <!-- Admin Tabs -->
+                <div class="flex flex-wrap border-b-2 border-pz-softpink gap-2 pb-2">
+                    <button onclick="switchCmsTab('globos')" class="cms-nav-btn active px-4 py-2 rounded-xl bg-pz-pink text-white font-party font-bold" id="btn-cms-globos">🎈 Decoración de Globos</button>
+                    <button onclick="switchCmsTab('cursos')" class="cms-nav-btn px-4 py-2 rounded-xl bg-pz-cream text-pz-dark font-party font-bold border border-pz-softpink" id="btn-cms-cursos">🎓 Cursos InflArte</button>
+                    <button onclick="switchCmsTab('snacks')" class="cms-nav-btn px-4 py-2 rounded-xl bg-pz-cream text-pz-dark font-party font-bold border border-pz-softpink" id="btn-cms-snacks">🍉 Barra de Snacks</button>
+                    <button onclick="switchCmsTab('adicionales')" class="cms-nav-btn px-4 py-2 rounded-xl bg-pz-cream text-pz-dark font-party font-bold border border-pz-softpink" id="btn-cms-adicionales">✨ Adicionales</button>
+                    <button onclick="switchCmsTab('general')" class="cms-nav-btn px-4 py-2 rounded-xl bg-pz-cream text-pz-dark font-party font-bold border border-pz-softpink" id="btn-cms-general">📱 Redes & WhatsApp</button>
+                </div>
+
+                <!-- CMS Tab Service -->
+                <div id="cms-pane-service" class="space-y-6">
+                    <div class="bg-pz-cream p-5 rounded-2xl border-2 border-pz-softpink space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h4 id="cms-service-header-title" class="font-party text-base font-bold text-pz-dark">Editar Álbum de Servicio</h4>
+                            <span id="cms-service-id-label" class="text-[10px] font-bold px-2.5 py-1 bg-pz-pink text-white rounded-full uppercase">globos</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Título del Servicio:</label>
+                                <input type="text" id="cms-input-title" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                            </div>
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Precio sugerido o nota de cotización:</label>
+                                <input type="text" id="cms-input-price" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1">Resumen corto (visible en la tarjeta):</label>
+                            <textarea id="cms-input-short" rows="2" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1">Descripción detallada (al abrir el álbum):</label>
+                            <textarea id="cms-input-full" rows="3" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1">
+                                <span class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-list-check text-pz-pink"></i>
+                                    <span>Detalles y características (puntos clave / viñetas):</span>
+                                </span>
+                            </label>
+                            <textarea id="cms-input-features" rows="4" placeholder="Escribe un detalle o característica por línea..." class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white text-xs"></textarea>
+                            <p class="text-[11px] text-gray-500 mt-1">
+                                💡 <strong>Tip:</strong> Escribe cada punto o viñeta en una línea separada (presiona Enter para agregar otro punto).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Upload multiple gallery photos -->
+                    <div class="bg-white p-5 rounded-2xl border-2 border-pz-pink space-y-4 shadow-sm">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-party text-sm font-bold text-pz-dark flex items-center gap-2">
+                                    <span>Fotos del Álbum</span>
+                                    <span id="cms-photo-count-badge" class="px-2 py-0.5 rounded-full bg-pz-pink text-white text-[10px]">0 fotos</span>
+                                </h4>
+                                <p class="text-[11px] text-gray-500">Sube las fotos reales desde la galería de tu celular o computadora. Haz clic en "Portada" para elegir cuál se muestra en la portada.</p>
+                            </div>
+
+                            <label class="cursor-pointer inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-pz-pink to-pz-hotpink text-white rounded-xl text-xs font-party font-bold shadow-md hover:scale-105 transition-all self-start sm:self-auto">
+                                <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
+                                <span>+ Subir fotos desde mi galería</span>
+                                <input type="file" id="cms-file-gallery" accept="image/*" multiple onchange="handleGalleryFilesSelected(event)" class="hidden">
+                            </label>
+                        </div>
+
+                        <!-- Gallery Thumbnails with remove & set as cover buttons -->
+                        <div id="cms-album-photos-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3 pt-2">
+                            <!-- Injected -->
+                        </div>
+
+                        <div id="cms-empty-gallery-msg" class="hidden text-center p-6 border-2 border-dashed border-gray-300 rounded-2xl text-gray-500">
+                            <p class="font-party font-bold text-sm text-gray-600">Aún no hay fotos en este álbum</p>
+                            <p class="text-[11px] mt-1">Presiona el botón rosado de arriba para subir fotos desde tu galería.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CMS Tab General (Socials & WhatsApp) -->
+                <div id="cms-pane-general" class="hidden space-y-5">
+                    <div class="bg-pz-cream p-5 rounded-2xl border-2 border-pz-softpink space-y-4">
+                        <h4 class="font-party text-base font-bold text-pz-dark">Configurar WhatsApp & Enlaces Oficiales</h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Número de WhatsApp (con lada, ej: 5219981234567):</label>
+                                <input type="text" id="cms-input-wa" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                                <p class="text-[10px] text-gray-500 mt-1">A este número se abrirán las cotizaciones directas.</p>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Número visible en pantalla:</label>
+                                <input type="text" id="cms-input-phone" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1">Facebook Party Zone Cancún:</label>
+                            <input type="url" id="cms-input-fb-party" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1">Facebook InflArte (Cursos):</label>
+                            <input type="url" id="cms-input-fb-inflarte" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1">TikTok:</label>
+                            <input type="url" id="cms-input-tiktok" class="w-full p-2.5 rounded-xl border border-pz-pink/40 bg-white">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="p-4 bg-pz-cream border-t-2 border-pz-softpink flex items-center justify-between">
+                <span class="text-[11px] text-gray-500">Party Zone Cancún & InflArte</span>
+                <button onclick="saveCmsData()" class="px-6 py-2.5 bg-pz-pink hover:bg-pz-hotpink text-white rounded-xl text-xs font-party font-bold uppercase tracking-wider transition-colors shadow-md">
+                    Guardar todos los cambios
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Application Script with IndexedDB support for high photo volume -->
+    <script>
+        /**
+         * INITIAL DATA STRUCTURE
+         * Note: Default galleries are empty ([]) as requested,
+         * showing "Falta agregar fotos" until Angela uploads her photos in Admin.
+         */
+        const defaultAppContent = {
+            social: {
+                whatsappNumber: "5219980000000",
+                phoneDisplay: "+52 1 998 000 0000",
+                fbParty: "https://www.facebook.com/sorpresas.adomicilio.cancun",
+                fbInflarte: "https://www.facebook.com/profile.php?id=100063479105467",
+                tiktok: "https://www.tiktok.com/@partyzone_cancun?lang=es-419"
+            },
+            services: {
+                globos: {
+                    id: "globos",
+                    brandBadge: "Party Zone Cancún",
+                    categoryBadge: "🎈 Decoración con Globos",
+                    title: "Decoraciones de Globos",
+                    shortDesc: "Arcos orgánicos con volumen festivo, guirnaldas, muros para sesión de fotos, bouquets temáticos y montajes llenos de color.",
+                    fullDesc: "En Party Zone Cancún creamos magia con globos de látex de alta calidad resistentes al clima de Cancún. Diseñamos arcos orgánicos de ensueño, columnas, backdrops circulares, números gigantes iluminados y guirnaldas temáticas personalizadas con tus colores favoritos.",
+                    price: "Cotización personalizada",
+                    coverIndex: 0,
+                    inclusions: [
+                        "Globos 100% látex biodegradables y resistentes",
+                        "Montaje temprano en salón o domicilio en Cancún",
+                        "Personalización de paleta de colores y figuras",
+                        "Retiro de estructuras al concluir tu celebración"
+                    ]
+                },
+                cursos: {
+                    id: "cursos",
+                    brandBadge: "InflArte Academia",
+                    categoryBadge: "🎓 Academia de Globos",
+                    title: "Cursos y Talleres InflArte",
+                    shortDesc: "Talleres prácticos en Cancún para aprender globoflexia moderna, arcos orgánicos, calibración y cómo cotizar para emprender.",
+                    fullDesc: "InflArte es la academia de globos de Party Zone. Diseñamos cursos 100% prácticos para que aprendas calibración, amarre seguro, creación de guirnaldas con técnica orgánica, flores, costos reales y proveedores para iniciar tu negocio de eventos.",
+                    price: "Cursos presenciales en Cancún",
+                    coverIndex: 0,
+                    inclusions: [
+                        "Todos los materiales y globos de práctica incluidos",
+                        "Manual didáctico con fórmulas de cotización",
+                        "Diploma de reconocimiento otorgado por InflArte",
+                        "Acceso a grupo de alumnas para asesoría"
+                    ]
+                },
+                snacks: {
+                    id: "snacks",
+                    brandBadge: "Party Zone Cancún",
+                    categoryBadge: "🍉 Barra de Snacks",
+                    title: "Barra de Snacks",
+                    shortDesc: "Mesas botaneras completas para fiestas con papas, fruta fresca picada con chilito y chamoy, gomitas, salsas y botanas.",
+                    fullDesc: "Nuestra Barra de Snacks tipo botanera es ideal para que todos los invitados disfruten. Incluye fruta fresca picada (como sandía, manzana o jícama con chamoy y chile en polvo), variedad de papas fritas, churritos, cacahuates, gomitas dulces y picositas, salsas botaneras y desechables para servir con la mayor higiene.",
+                    price: "Paquetes según número de personas",
+                    coverIndex: 0,
+                    inclusions: [
+                        "Charolas de acero y recipientes botaneros higiénicos",
+                        "Fruta fresca, papas variadas, cacahuates y gomitas",
+                        "Chamoy, limón, sal y salsas botaneras variadas",
+                        "Vasitos, servilletas y montaje completo en tu fiesta"
+                    ]
+                },
+                adicionales: {
+                    id: "adicionales",
+                    brandBadge: "Party Zone Cancún",
+                    categoryBadge: "✨ Servicios Adicionales",
+                    title: "Adicionales para Eventos",
+                    shortDesc: "Renta de letreros Neón Flex, mamparas redondas, bases cilíndricas para pastel, arreglos sorpresa y detalles especiales.",
+                    fullDesc: "Complementa tu celebración con piezas en renta que elevan el impacto visual de las fotos: cilindros modernos para pastel, mamparas circulares o cuadradas, letreros luminosos Neón Flex y detalles sorpresa a domicilio en Cancún.",
+                    price: "Renta individual o en paquete",
+                    coverIndex: 0,
+                    inclusions: [
+                        "Letreros Neón Flex con luz cálida o blanca",
+                        "Mesas cilindro de madera lacada de combinación fácil",
+                        "Entrega, instalación y recolección puntual",
+                        "Descuento especial al combinar con globos o snacks"
+                    ]
+                }
+            }
+        };
+
+        // Runtime state
+        let appData = null;
+        let photosDb = {
+            globos: [],
+            cursos: [],
+            snacks: [],
+            adicionales: []
+        };
+        let isAdminLoggedIn = false;
+        let activeCmsCategory = 'globos';
+
+        /**
+         * IndexedDB Manager to store hundreds of photos without localStorage limits
+         */
+        const DB_NAME = 'PartyZonePhotosDB';
+        const DB_VERSION = 1;
+        const STORE_NAME = 'category_galleries';
+
+        function openIndexedDB() {
+            return new Promise((resolve, reject) => {
+                const req = indexedDB.open(DB_NAME, DB_VERSION);
+                req.onupgradeneeded = (e) => {
+                    const db = e.target.result;
+                    if (!db.objectStoreNames.contains(STORE_NAME)) {
+                        db.createObjectStore(STORE_NAME, { keyPath: 'categoryId' });
+                    }
+                };
+                req.onsuccess = () => resolve(req.result);
+                req.onerror = () => reject(req.error);
+            });
+        }
+
+        async function loadPhotosFromDB() {
+            try {
+                const db = await openIndexedDB();
+                const tx = db.transaction(STORE_NAME, 'readonly');
+                const store = tx.objectStore(STORE_NAME);
+
+                const keys = ['globos', 'cursos', 'snacks', 'adicionales'];
+                for (const k of keys) {
+                    const req = store.get(k);
+                    await new Promise((res) => {
+                        req.onsuccess = () => {
+                            if (req.result && Array.isArray(req.result.photos)) {
+                                photosDb[k] = req.result.photos;
+                            } else {
+                                photosDb[k] = [];
+                            }
+                            res();
+                        };
+                        req.onerror = () => res();
+                    });
+                }
+            } catch(e) {
+                console.warn("IndexedDB load fallback:", e);
+            }
+        }
+
+        async function savePhotosCategoryToDB(categoryId, photosArray) {
+            try {
+                const db = await openIndexedDB();
+                const tx = db.transaction(STORE_NAME, 'readwrite');
+                const store = tx.objectStore(STORE_NAME);
+                store.put({ categoryId: categoryId, photos: photosArray });
+                return new Promise((resolve) => {
+                    tx.oncomplete = () => resolve(true);
+                    tx.onerror = () => resolve(false);
+                });
+            } catch(e) {
+                console.warn("IndexedDB save error:", e);
+                return false;
+            }
+        }
+
+        /**
+         * Initialize App
+         */
+        async function initApp() {
+            const stored = localStorage.getItem('partyzone_cancun_v3_content');
+            if (stored) {
+                try {
+                    appData = JSON.parse(stored);
+                } catch(e) {
+                    appData = JSON.parse(JSON.stringify(defaultAppContent));
+                }
+            } else {
+                appData = JSON.parse(JSON.stringify(defaultAppContent));
+                localStorage.setItem('partyzone_cancun_v3_content', JSON.stringify(appData));
+            }
+
+            // Load high capacity photos from IndexedDB
+            await loadPhotosFromDB();
+
+            isAdminLoggedIn = sessionStorage.getItem('pz_admin_session') === 'true';
+
+            renderPage();
+            updateAdminButton();
+
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            const toggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-nav');
+            if (toggle && mobileMenu) {
+                toggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+
+        /**
+         * Render Main View
+         */
+        function renderPage() {
+            const waUrl = `https://wa.me/${appData.social.whatsappNumber}?text=${encodeURIComponent("¡Hola Party Zone Cancún e InflArte! Deseo información y cotizar para mi evento.")}`;
+            
+            document.getElementById('header-whatsapp').href = waUrl;
+            document.getElementById('nav-btn-whatsapp').href = waUrl;
+            document.getElementById('mobile-wa-link').href = waUrl;
+            document.getElementById('hero-cta-whatsapp').href = waUrl;
+            document.getElementById('contact-wa-link').href = waUrl;
+
+            document.getElementById('header-fb-party').href = appData.social.fbParty;
+            document.getElementById('contact-fb-party').href = appData.social.fbParty;
+
+            document.getElementById('header-fb-inflarte').href = appData.social.fbInflarte;
+            document.getElementById('contact-fb-inflarte').href = appData.social.fbInflarte;
+
+            document.getElementById('header-tiktok').href = appData.social.tiktok;
+            document.getElementById('contact-tiktok').href = appData.social.tiktok;
+
+            document.getElementById('display-wa-number').textContent = appData.social.phoneDisplay;
+
+            renderCategoryCards();
+        }
+
+        /**
+         * Render 4 Category Cards
+         * Displays real photo if uploaded, otherwise custom fallback without fake stock images
+         */
+        function renderCategoryCards() {
+            const grid = document.getElementById('services-grid');
+            grid.innerHTML = '';
+
+            const keys = ['globos', 'cursos', 'snacks', 'adicionales'];
+            const icons = {
+                globos: '🎈',
+                cursos: '🎓',
+                snacks: '🍉',
+                adicionales: '✨'
+            };
+
+            keys.forEach(k => {
+                const s = appData.services[k];
+                if (!s) return;
+
+                const photos = photosDb[k] || [];
+                const coverIdx = s.coverIndex || 0;
+                const coverSrc = photos.length > 0 ? (photos[coverIdx] || photos[0]) : null;
+
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-3xl overflow-hidden border-2 border-pz-softpink shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer hover:-translate-y-1";
+                card.onclick = () => openAlbumModal(k);
+
+                let coverHtml = '';
+                if (coverSrc) {
+                    coverHtml = `
+                        <div class="relative h-60 overflow-hidden bg-pz-softpink">
+                            <img src="${coverSrc}" alt="${s.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-pz-dark text-[11px] font-party font-bold px-3 py-1 rounded-full shadow-xs">
+                                ${s.brandBadge}
+                            </span>
+                            <span class="absolute top-3 right-3 bg-pz-pink text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs flex items-center gap-1">
+                                <i class="fa-solid fa-camera"></i> ${photos.length} fotos
+                            </span>
+                            <div class="absolute bottom-3 left-3 right-3 text-white">
+                                <h3 class="font-party text-xl font-bold leading-tight drop-shadow-sm">${s.title}</h3>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Clean, cheerful fallback without external fake images
+                    coverHtml = `
+                        <div class="relative h-60 bg-gradient-to-br from-pz-softpink via-white to-amber-50 flex flex-col items-center justify-center p-6 text-center border-b-2 border-pz-softpink">
+                            <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-pz-dark text-[11px] font-party font-bold px-3 py-1 rounded-full shadow-xs">
+                                ${s.brandBadge}
+                            </span>
+                            <span class="absolute top-3 right-3 bg-amber-400 text-pz-dark text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs">
+                                Próximamente fotos
+                            </span>
+                            <div class="text-4xl mb-2 animate-bounce">
+                                ${icons[k] || '🎉'}
+                            </div>
+                            <h3 class="font-party text-xl font-bold text-pz-dark">${s.title}</h3>
+                            <p class="text-[11px] text-gray-500 font-medium mt-1">📸 Falta agregar fotos (se agregan en Admin)</p>
+                        </div>
+                    `;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        ${coverHtml}
+                        <div class="p-5 space-y-3">
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed font-medium">
+                                ${s.shortDesc}
+                            </p>
+                            <div class="pt-2 border-t border-pz-softpink flex items-center justify-between text-xs font-bold text-pz-hotpink">
+                                <span>${s.price}</span>
+                                <span class="text-pz-dark font-party flex items-center gap-1 group-hover:text-pz-pink transition-colors">
+                                    Ver Álbum <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <button class="w-full py-2.5 rounded-xl bg-pz-softpink group-hover:bg-pz-pink group-hover:text-white text-pz-pink font-party font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-images"></i>
+                            <span>Abrir Álbum</span>
+                        </button>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        /**
+         * Open Album Modal
+         */
+        function openAlbumModal(serviceKey) {
+            const serv = appData.services[serviceKey];
+            if (!serv) return;
+
+            const photos = photosDb[serviceKey] || [];
+
+            document.getElementById('modal-badge').textContent = serv.categoryBadge;
+            document.getElementById('modal-title').textContent = serv.title;
+            document.getElementById('modal-subtext').textContent = serv.brandBadge;
+            document.getElementById('modal-desc').textContent = serv.fullDesc;
+            document.getElementById('modal-price').textContent = serv.price;
+
+            const mainImg = document.getElementById('modal-main-img');
+            const noPhotosBox = document.getElementById('modal-no-photos-box');
+            const thumbsWrapper = document.getElementById('modal-thumbnails-wrapper');
+            const thumbsGrid = document.getElementById('modal-thumbnails-grid');
+
+            if (photos.length > 0) {
+                noPhotosBox.classList.add('hidden');
+                mainImg.classList.remove('hidden');
+                mainImg.src = photos[0];
+
+                thumbsWrapper.classList.remove('hidden');
+                document.getElementById('modal-photo-count').textContent = `${photos.length} fotos reales`;
+                thumbsGrid.innerHTML = '';
+
+                photos.forEach((url, index) => {
+                    const thumb = document.createElement('img');
+                    thumb.src = url;
+                    thumb.className = `h-16 w-full object-cover rounded-xl cursor-pointer border-2 transition-all hover:scale-105 ${index === 0 ? 'border-pz-pink ring-2 ring-pz-pink/40' : 'border-pz-softpink'}`;
+                    thumb.onclick = () => {
+                        mainImg.src = url;
+                        thumbsGrid.querySelectorAll('img').forEach(el => el.classList.remove('border-pz-pink', 'ring-2', 'ring-pz-pink/40'));
+                        thumb.classList.add('border-pz-pink', 'ring-2', 'ring-pz-pink/40');
+                    };
+                    thumbsGrid.appendChild(thumb);
+                });
+            } else {
+                mainImg.classList.add('hidden');
+                noPhotosBox.classList.remove('hidden');
+                thumbsWrapper.classList.add('hidden');
+            }
+
+            const featList = document.getElementById('modal-features');
+            featList.innerHTML = '';
+            if (serv.inclusions && serv.inclusions.length) {
+                serv.inclusions.forEach(inc => {
+                    const li = document.createElement('li');
+                    li.textContent = inc;
+                    featList.appendChild(li);
+                });
+            }
+
+            const waBtn = document.getElementById('modal-wa-btn');
+            waBtn.onclick = () => {
+                const text = `¡Hola Party Zone Cancún e InflArte! Estuve viendo la sección de "${serv.title}" y me gustaría cotizar para mi evento.`;
+                window.open(`https://wa.me/${appData.social.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+            };
+
+            const modal = document.getElementById('album-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAlbumModal() {
+            document.getElementById('album-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('quote-name').value.trim();
+            const phone = document.getElementById('quote-phone').value.trim();
+            const cat = document.getElementById('quote-category').value;
+            const date = document.getElementById('quote-date').value;
+            const notes = document.getElementById('quote-notes').value.trim();
+
+            const message = `🎉 *¡Hola Party Zone Cancún & InflArte!*\n\n` +
+                            `Mi nombre es: *${name}*\n` +
+                            `📱 Teléfono: ${phone}\n` +
+                            `🎈 Me interesa: *${cat}*\n` +
+                            (date ? `📅 Fecha estimada: ${date}\n` : '') +
+                            (notes ? `💬 Comentarios: ${notes}\n` : '') +
+                            `\n¿Me podrían brindar información y disponibilidad? ¡Gracias!`;
+
+            window.open(`https://wa.me/${appData.social.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        /**
+         * Admin Authentication & Management
+         */
+        function updateAdminButton() {
+            const btn = document.getElementById('admin-button-text');
+            btn.textContent = isAdminLoggedIn ? "Admin (Activo)" : "Admin";
+        }
+
+        function openAdminModal() {
+            if (isAdminLoggedIn) {
+                openAdminCms();
+            } else {
+                document.getElementById('admin-user-input').value = '';
+                document.getElementById('admin-pass-input').value = '';
+                document.getElementById('admin-login-error').classList.add('hidden');
+                document.getElementById('admin-login-modal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('admin-login-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const user = document.getElementById('admin-user-input').value.trim();
+            const pass = document.getElementById('admin-pass-input').value.trim();
+            const err = document.getElementById('admin-login-error');
+
+            if (user === 'Angela' && pass === 'Angela01') {
+                isAdminLoggedIn = true;
+                sessionStorage.setItem('pz_admin_session', 'true');
+                closeAdminModal();
+                updateAdminButton();
+                openAdminCms();
+            } else {
+                err.classList.remove('hidden');
+            }
+        }
+
+        function openAdminCms() {
+            populateCmsFields();
+            document.getElementById('admin-cms-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAdminCms() {
+            document.getElementById('admin-cms-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function adminLogout() {
+            isAdminLoggedIn = false;
+            sessionStorage.removeItem('pz_admin_session');
+            updateAdminButton();
+            closeAdminCms();
+        }
+
+        function switchCmsTab(tabKey) {
+            activeCmsCategory = tabKey;
+
+            const btns = document.querySelectorAll('.cms-nav-btn');
+            btns.forEach(b => {
+                b.classList.remove('bg-pz-pink', 'text-white');
+                b.classList.add('bg-pz-cream', 'text-pz-dark');
+            });
+            const currBtn = document.getElementById(`btn-cms-${tabKey}`);
+            if (currBtn) {
+                currBtn.classList.add('bg-pz-pink', 'text-white');
+                currBtn.classList.remove('bg-pz-cream', 'text-pz-dark');
+            }
+
+            const servPane = document.getElementById('cms-pane-service');
+            const genPane = document.getElementById('cms-pane-general');
+
+            if (tabKey === 'general') {
+                servPane.classList.add('hidden');
+                genPane.classList.remove('hidden');
+            } else {
+                servPane.classList.remove('hidden');
+                genPane.classList.add('hidden');
+                loadServiceToCms(tabKey);
+            }
+        }
+
+        function populateCmsFields() {
+            document.getElementById('cms-input-wa').value = appData.social.whatsappNumber;
+            document.getElementById('cms-input-phone').value = appData.social.phoneDisplay;
+            document.getElementById('cms-input-fb-party').value = appData.social.fbParty;
+            document.getElementById('cms-input-fb-inflarte').value = appData.social.fbInflarte;
+            document.getElementById('cms-input-tiktok').value = appData.social.tiktok;
+
+            switchCmsTab('globos');
+        }
+
+        function loadServiceToCms(key) {
+            const s = appData.services[key];
+            if (!s) return;
+
+            document.getElementById('cms-service-header-title').textContent = `Editar: ${s.title}`;
+            document.getElementById('cms-service-id-label').textContent = s.brandBadge;
+
+            document.getElementById('cms-input-title').value = s.title;
+            document.getElementById('cms-input-price').value = s.price;
+            document.getElementById('cms-input-short').value = s.shortDesc;
+            document.getElementById('cms-input-full').value = s.fullDesc;
+
+            // Load bullet points as one item per line
+            const features = Array.isArray(s.inclusions) ? s.inclusions : [];
+            document.getElementById('cms-input-features').value = features.join('\n');
+
+            renderCmsAlbumPhotos(key);
+        }
+
+        function renderCmsAlbumPhotos(key) {
+            const container = document.getElementById('cms-album-photos-grid');
+            const emptyMsg = document.getElementById('cms-empty-gallery-msg');
+            const countBadge = document.getElementById('cms-photo-count-badge');
+            container.innerHTML = '';
+
+            const photos = photosDb[key] || [];
+            const coverIdx = appData.services[key].coverIndex || 0;
+            countBadge.textContent = `${photos.length} fotos`;
+
+            if (photos.length === 0) {
+                emptyMsg.classList.remove('hidden');
+                return;
+            } else {
+                emptyMsg.classList.add('hidden');
+            }
+
+            photos.forEach((url, idx) => {
+                const item = document.createElement('div');
+                const isCover = (idx === coverIdx);
+                item.className = `relative rounded-xl overflow-hidden border-2 ${isCover ? 'border-pz-pink ring-2 ring-pz-pink' : 'border-pz-softpink'} bg-black h-28 flex flex-col justify-between`;
+                
+                item.innerHTML = `
+                    <img src="${url}" class="w-full h-full object-cover">
+                    
+                    ${isCover ? '<span class="absolute top-1 left-1 bg-pz-pink text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow">Portada</span>' : ''}
+
+                    <div class="absolute bottom-1 inset-x-1 flex items-center justify-between gap-1">
+                        <button onclick="setAsCoverPhoto('${key}', ${idx})" class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-white/90 text-pz-dark hover:bg-white shadow">
+                            ${isCover ? '✓ Principal' : 'Usar Portada'}
+                        </button>
+                        <button onclick="removePhoto('${key}', ${idx})" title="Eliminar foto" class="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center text-xs opacity-90 hover:opacity-100 hover:scale-110 transition-all shadow">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function setAsCoverPhoto(key, idx) {
+            appData.services[key].coverIndex = idx;
+            renderCmsAlbumPhotos(key);
+        }
+
+        function removePhoto(key, idx) {
+            if (photosDb[key]) {
+                photosDb[key].splice(idx, 1);
+                if (appData.services[key].coverIndex >= photosDb[key].length) {
+                    appData.services[key].coverIndex = 0;
+                }
+                savePhotosCategoryToDB(key, photosDb[key]);
+                renderCmsAlbumPhotos(key);
+                renderCategoryCards();
+            }
+        }
+
+        /**
+         * Canvas image optimizer: resizes to max 1080px and compresses JPEG
+         * Allows uploading dozens or hundreds of photos smoothly.
+         */
+        function compressFile(file, maxWidth = 1080, quality = 0.75) {
+            return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        let width = img.width;
+                        let height = img.height;
+                        if (width > maxWidth) {
+                            height = Math.round((height * maxWidth) / width);
+                            width = maxWidth;
+                        }
+                        const canvas = document.createElement('canvas');
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, width, height);
+                        resolve(canvas.toDataURL('image/jpeg', quality));
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        async function handleGalleryFilesSelected(e) {
+            const files = Array.from(e.target.files);
+            if (!files.length) return;
+
+            const key = activeCmsCategory;
+            if (!photosDb[key]) photosDb[key] = [];
+
+            for (const f of files) {
+                const base64 = await compressFile(f, 1080, 0.75);
+                photosDb[key].push(base64);
+            }
+
+            // Save to IndexedDB
+            await savePhotosCategoryToDB(key, photosDb[key]);
+            renderCmsAlbumPhotos(key);
+            renderCategoryCards();
+
+            e.target.value = '';
+        }
+
+        async function saveCmsData() {
+            appData.social.whatsappNumber = document.getElementById('cms-input-wa').value.trim();
+            appData.social.phoneDisplay = document.getElementById('cms-input-phone').value.trim();
+            appData.social.fbParty = document.getElementById('cms-input-fb-party').value.trim();
+            appData.social.fbInflarte = document.getElementById('cms-input-fb-inflarte').value.trim();
+            appData.social.tiktok = document.getElementById('cms-input-tiktok').value.trim();
+
+            const k = activeCmsCategory;
+            if (k !== 'general' && appData.services[k]) {
+                appData.services[k].title = document.getElementById('cms-input-title').value.trim();
+                appData.services[k].price = document.getElementById('cms-input-price').value.trim();
+                appData.services[k].shortDesc = document.getElementById('cms-input-short').value.trim();
+                appData.services[k].fullDesc = document.getElementById('cms-input-full').value.trim();
+
+                // Save features / inclusions from multiline text
+                const featuresRaw = document.getElementById('cms-input-features').value;
+                appData.services[k].inclusions = featuresRaw
+                    .split('\n')
+                    .map(line => line.trim())
+                    .filter(line => line.length > 0);
+                
+                await savePhotosCategoryToDB(k, photosDb[k] || []);
+            }
+
+            localStorage.setItem('partyzone_cancun_v3_content', JSON.stringify(appData));
+            renderPage();
+
+            const toast = document.getElementById('cms-toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        window.onload = function() {
+            initApp();
+        };
+    </script>
+</body>
+</html>
